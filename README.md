@@ -14,17 +14,17 @@ Com os seguintes programas instalados
 
 A aplicação estará disponivel em localhost na porta 3000.
 Exemplos de execução: 
-localhost:3000/books
+*localhost:3000/books*
 
-No body de um request (form-urlencoded) POST - 
-Column1 = author
-Column2 = title
-Column3 = editionYear
+*No body de um request (form-urlencoded) POST*
+1. Column1 = author
+1. Column2 = title
+1. Column3 = editionYear
 
-Para order decrescente adicionar o negativo antes do nome da coluna, por exemplo: 
+*Para order decrescente adicionar o negativo antes do nome da coluna, por exemplo:*
 
-Column1 = -author
-Column2 = -title
-Column3 = -editionYear.
+1. Column1 = -author
+1. Column2 = -title
+1. Column3 = -editionYear.
 
-Sendo possivel tambem ordenar por apenas 1 ou 2 colunas.
+*Sendo possivel tambem ordenar por apenas 1 ou 2 colunas.*
