@@ -3,9 +3,9 @@
 # Para Ubuntu 16.04
 
 Com os seguintes programas instalados
-1.git
-1.nodejs
-1.npm
+1. git
+1. nodejs
+1. npm
 
 # Instalação e execução
 1. baixar repositorio
