@@ -9,11 +9,11 @@ var appRouter = function (app) {
     var column2 = req.body.column2;
     var column3 = req.body.column3;
     if (column3 != null){
-      books = books.sort(dynamicSortMultiple(column1, column2, column3));
+      books = books.sort(sortMultiple(column1, column2, column3));
     } else if (column2 != null){
-      books = books.sort(dynamicSortMultiple(column1, column2));
+      books = books.sort(sortMultiple(column1, column2));
     } else if (column1) {
-      books = books.sort(dynamicSortMultiple(column1));
+      books = books.sort(sortMultiple(column1));
     } 
     res.status(200).send(books);
   });
@@ -32,18 +32,18 @@ var book3 = new Book(3, "Head First Design Patterns","Elisabeth Freeman","2004")
 var book4 = new Book(4, "Internet & World Wide Web: How to Program","Deitel & Deitel","2007");
 var books = [book1, book2, book3, book4];
 
-function dynamicSortMultiple() {
+function sortMultiple() {
     var props = arguments;
     return function (obj1, obj2) {
-        var i = 0, result = 0, numberOfProperties = props.length;
-        while(result === 0 && i < numberOfProperties) {
-            result = dynamicSort(props[i])(obj1, obj2);
+        var i = 0, res = 0, numOfProps = props.length;
+        while(res === 0 && i < numOfProps) {
+            res = dynamicSort(props[i])(obj1, obj2);
             i++;
         }
-        return result;
+        return res;
     }
 }
-function dynamicSort(property) {
+function uniqueSort(property) {
     var sortOrder = 1;
     if(property[0] === "-") {
         sortOrder = -1;
