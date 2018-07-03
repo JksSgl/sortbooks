@@ -37,7 +37,7 @@ function sortMultiple() {
     return function (obj1, obj2) {
         var i = 0, res = 0, numOfProps = props.length;
         while(res === 0 && i < numOfProps) {
-            res = dynamicSort(props[i])(obj1, obj2);
+            res = uniqueSort(props[i])(obj1, obj2);
             i++;
         }
         return res;
